@@ -1,22 +1,41 @@
-import { useState } from 'react'
-import './App.css'
+import './App.css';
+import Card from './Card';
 
 function App() {
-  const [count, setCount] = useState(0)
+    const handleGithubClick = () => {
+        window.location.href = 'https://github.com/ethanstucker';
+    };
 
-  return (
-    <>
-      <div>
-      </div>
-      <h1>This site is under heavy construction!</h1>
-      <div className="card">
-          {count === 69 && <p>Nice!</p>}
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-      </div>
-    </>
-  )
+    const handleResumeClick = () => {
+        window.location.href = '/path/to/resume.pdf';
+    };
+
+    return (
+        <div className="App">
+            <div>
+                <h1>Hi! My name is Ethan Stucker,</h1>
+                <p>I'm currently a senior at UCA in Conway AR studying Computer Science.</p>
+                <p>Click on a card below to learn more about me.</p>
+            </div>
+            <div className="card-container">
+                <Card
+                    image="/public/GitHub-Logo.png"
+                    text="GitHub"
+                    onClick={handleGithubClick}
+                />
+                <Card
+                    image="path/to/resume-image.png"
+                    text="Resume"
+                    onClick={handleResumeClick}
+                />
+                <Card
+                    image="path/to/placeholder-image.png"
+                    text="Coming Soon"
+                    onClick={() => {}}
+                />
+            </div>
+        </div>
+    );
 }
 
-export default App
+export default App;
