@@ -1,13 +1,12 @@
+import React, { useState } from 'react';
 import './App.css';
 import Card from './Card';
 
 function App() {
-    const handleGithubClick = () => {
-        window.location.href = 'https://github.com/ethanstucker';
-    };
+    const [showResume, setShowResume] = useState(false);
 
     const handleResumeClick = () => {
-        window.location.href = '/path/to/resume.pdf';
+        setShowResume(!showResume);
     };
 
     return (
@@ -20,20 +19,27 @@ function App() {
             <div className="card-container">
                 <Card
                     image="/public/GitHub-Logo.png"
-                    text="GitHub"
-                    onClick={handleGithubClick}
+                    text="View my github and see the projects I have done!"
+                    onClick={() => window.location.href = 'https://github.com/ethanstucker'}
                 />
                 <Card
-                    image="path/to/resume-image.png"
-                    text="Resume"
+                    image="/public/resume_logo.png"
+                    text="Take a look at my Resume!"
                     onClick={handleResumeClick}
                 />
                 <Card
-                    image="path/to/placeholder-image.png"
+                    image="/public/construction_cone.png"
                     text="Coming Soon"
                     onClick={() => {}}
                 />
             </div>
+            {showResume && (
+                <div className="resume">
+                    <h2>My Resume</h2>
+                    <p>Here is the text of my resume with some <span className="highlight">highlighting</span>.</p>
+                    <p>Click <span className="highlight" onClick={handleResumeClick}>here</span> to close.</p>
+                </div>
+            )}
         </div>
     );
 }
