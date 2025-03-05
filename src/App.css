@@ -57,8 +57,25 @@
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 8px;
-  background-color: gray;
+  background-color: #252524; /* Light background color */
+  color: #fff; /* Dark text color */
   animation: fadeIn 0.5s ease-in-out;
+}
+
+.resume h2 {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.resume p {
+  margin: 10px 0;
+}
+
+.resume hr.barrier {
+  width: 75%; /* Adjust the width as needed */
+  margin-left: 9em; /* Align to the left */
+  border: 1px solid #fff;
 }
 
 @keyframes fadeIn {
@@ -84,12 +101,6 @@
 .indentRight {
   text-align: right;
   padding-right: 10em;
-}
-
-.barrier {
-  width: 75%; /* Adjust the width as needed */
-  margin-left: 9em; /* Align to the left */
-  border: 1px solid #000; /* Optional: Customize the border style */
 }
 
 /* Add this to your existing CSS */

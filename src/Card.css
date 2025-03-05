@@ -3,14 +3,15 @@
     border: 1px solid #ccc;
     border-radius: 8px;
     overflow: hidden;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
     text-align: center;
 }
 
 .card img {
     width: 100%;
-    height: auto;
+    height: 150px;
+    object-fit: cover;
 }
 
 .card p {
@@ -19,4 +20,5 @@
 
 .card:hover {
     transform: scale(1.05);
+    box-shadow: 0 0 50px rgba(255, 215, 0, 1);
 }

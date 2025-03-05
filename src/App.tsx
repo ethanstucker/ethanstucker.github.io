@@ -18,17 +18,17 @@ function App() {
             </div>
             <div className="card-container">
                 <Card
-                    image="/public/GitHub-Logo.png"
+                    image="/GitHub-Logo.png"
                     text="View my github and see the projects I have done!"
                     onClick={() => window.location.href = 'https://github.com/ethanstucker'}
                 />
                 <Card
-                    image="/public/resume_logo.png"
+                    image="/resume_logo.png"
                     text="Take a look at my Resume!"
                     onClick={handleResumeClick}
                 />
                 <Card
-                    image="/public/construction_cone.png"
+                    image="/construction_cone.png"
                     text="Coming Soon"
                     onClick={() => {}}
                 />
